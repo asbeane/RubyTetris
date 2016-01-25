@@ -4,6 +4,11 @@ class Board
 		@x_dimension = x
 		@y_dimension = y
 		@board       = Array.new(x){Array.new(y)}
+		for i in 0 ...@x_dimension
+			for j in 0...@y_dimension
+				@board[i][j] = 0
+			end
+		end
 	end
 
 	# Draws board for number of rows and columns
