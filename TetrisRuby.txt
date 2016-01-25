@@ -1,0 +1,26 @@
+Notes to Build the Tetris Board Reader in Ruby
+----------------------------------------------
+
+ -Board Class - takes in X by Y shape -- each value would be a CELL - Where a piece could be located
+ 	- Output to command line .. OR use Graphics Library ...
+
+ 	- Board Class should
+
+ - Shape/Piece Class
+ 	- Have a description of each shape
+ 	- Function to identify if a given piece exists...
+
+- Two questions - Piece overlap - I am assuming it's not allowed
+- Graphical ... or command line .... we'll see.
+
+Create Game Class .. or maybe just main function depending on what appears to be easier
+	- Game class should generate the board with random configuration --- Put limits on size of board (Only for generating the view of the board.
+
+
+Piece - Parent Class
+	- Initialize a piece with an orientation - orientation can be 0,90,180,270
+		- You can call flip function which will simply change the orientation
+		- Each piece has it's own inherited class .. OR do I even need that.
+		- MAYBE I should pass a description of the piece .... and flip it on that ..
+			- OR I can just make a class that has the four orientations for each ...
+		- Each class needs to be able to find itself in each Orientation ...
