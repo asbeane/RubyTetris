@@ -3,7 +3,7 @@ Ruby Tetris Board Scorer
 
 This is a board scorer for Tetris where pieces can only touch on diagonals.
 
-How to run:
+How to run: (Expects all Command Line Arguments to be present).
   ruby main.rb &nbsp; [arg1]&nbsp; [arg2] &nbsp;[arg3]<br>
   Example: ruby main.rb &nbsp; 5 &nbsp; 0 &nbsp; 1<br>
   &nbsp;&nbsp; This would simulate and score 5 boards, not print the initial board, but would print the filled board.<br>
@@ -12,6 +12,7 @@ How to run:
   arg2 - If 1  For each board, draw the filled board with pieces.<br>
   
   *Program expects all files to be located in same directory.<br>
+  *Uses No External libraries. Only included files are the ones created as part of the program.<br>
 
 Result:
   For the number of simulations, runs that many boards of pseudo random dimensions between 5-30 length and width, and scores it.<br>
