@@ -55,7 +55,7 @@ add_piece() - Assumes placability has already been checked.<br>
   &nbsp;start_x - Starting x value to add add a piece to a board.<br>
   &nbsp;start_y - Starting y value to add a piece to a board.<br>
   &nbsp;board -   2D Array representation of the board to add the piece too.<br>
-  &nbsp;orientation - The orientation to add to the board. Expects a valid orientation 0-orientations-1 for that piece<br>
+  &nbsp;orientation - The orientation to add to the board. Expects a valid number for the orientation for that piece.<br>
   
   find_pieces() - Traverses a board and reports the total score given the number of the given piece on the board.<br>
     &nbsp;Arguments<br>
