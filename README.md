@@ -10,6 +10,8 @@ How to run:
   arg1 - number of boards to score/simulate <br>
   arg2 - If 1, For each board, draw the initial empty board to the terminal/prompt in ascii characters.<br>
   arg2 - If 1  For each board, draw the filled board with pieces.<br>
+  
+  *Program expects all files to be located in same directory.<br>
 
 Result:
   For the number of simulations, runs that many boards of pseudo random dimensions between 5-30 length and width, and scores it.<br>
@@ -56,4 +58,7 @@ add_piece() - Assumes placability has already been checked.<br>
   
   find_pieces() - Traverses a board and reports the total score given the number of the given piece on the board.<br>
     &nbsp;Arguments<br>
-    &nbsp;board - the board to score for a given piece
+    &nbsp;board - the board to score for a given piece<br>
+    
+    Additions: <br>
+    &nbsp;Add more piece types with the same structure as the existing pieces.
