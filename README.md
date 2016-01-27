@@ -36,7 +36,7 @@ Classes:<br>
   T => T Tetris Piece <br>
     T.new()<br>
     
-Each of the Piece classes have the same 3 public functions, plus 1 private helper, implemented. Which allows for simpler, and more reporducable use when using the  different classes.<br><br>
+Each of the Piece classes have the same 3 public functions, plus 1 private helper, implemented.
 
 Public Methods:<br>
 can_place() - Arguments<br>
