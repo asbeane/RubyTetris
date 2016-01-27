@@ -8,30 +8,30 @@ How to run:
   
   arg1 - number of boards to score/simulate <br>
   arg2 - If 1, For each board, draw the initial empty board to the terminal/prompt in ascii characters.<br>
-  arg2 - If 1  For each board draw the filled board with pieces.<br><br>
+  arg2 - If 1  For each board, draw the filled board with pieces.<br>
 
 Result:
-  For the number of simulations, runs that many boards of pseudo random dimensions between 5-30 length and width, and scores it.<>
-  Program will Always output final score of board.
+  For the number of simulations, runs that many boards of pseudo random dimensions between 5-30 length and width, and scores it.<br>
+  The program will Always output final score of board.<br>
   Small Note for board drawing: Tested on windows and Mac OS - for larger dimensions of width, there was some distortion in the ASCII
   representation of the board, visually. The scoring still appears to work fine - but the visual drawing can become distored when the
   the row length exceeds the width of the command/terminal window.<br><br>
 
 Classes:<br>
   Board - Takes X and Y coordinates which implements a X by Y board.<br>
-    Board.new(x,y)<br><br>
+    Board.new(x,y)<br>
   
   I => I Tetris Piece.<br>
-    I.new()<br><br>
+    I.new()<br>
     
   J => J Tetris Piece<br>
-    J.new()<br><br>
+    J.new()<br>
     
   O => O (or square) Tetris Piece<br>
-    O.new()<br><br>
+    O.new()<br>
     
   S => S Tetris Piece<br>
-    S.new()<br><br>
+    S.new()<br>
     
   T => T Tetris Piece <br><br>
     T.new()<br>
