@@ -40,19 +40,19 @@ Each of the Piece classes have the same 3 public functions, plus 1 private helpe
 
 Public Methods:<br>
 can_place() - Arguments<br>
-  start_x: Starting X coordinate to check if the Piece is placable on the board.<br>
-  start_y: Starting Y coordinate to check if the Piece is placable on the board.<br>
-  board: 2D Array, which is the array describing the board to be checked for piece placability.<br>
-  orientation - A number, is normalized internally for the number of orientations a given piece has. Used to check a given orientation   for placability.<br>
+  &nbsp;start_x: Starting X coordinate to check if the Piece is placable on the board.<br>
+  &nbsp;start_y: Starting Y coordinate to check if the Piece is placable on the board.<br>
+  &nbsp;board: 2D Array, which is the array describing the board to be checked for piece placability.<br>
+  &nbsp;orientation - A number, is normalized internally for the number of orientations a given piece has. Used to check a given orientation for placability.<br>
   
   
 add_piece() - Assumes placability has already been checked.<br>
-  Arguments<br>
-  start_x - Starting x value to add add a piece to a board.<br>
-  start_y - Starting y value to add a piece to a board.<br>
-  board -   2D Array representation of the board to add the piece too.<br>
-  orientation - The orientation to add to the board. Expects a valid orientation 0-orientations-1 for that piece<br>
+  &nbsp;Arguments<br>
+  &nbsp;start_x - Starting x value to add add a piece to a board.<br>
+  &nbsp;start_y - Starting y value to add a piece to a board.<br>
+  &nbsp;board -   2D Array representation of the board to add the piece too.<br>
+  &nbsp;orientation - The orientation to add to the board. Expects a valid orientation 0-orientations-1 for that piece<br>
   
   find_pieces() - Traverses a board and reports the total score given the number of the given piece on the board.<br>
-    Arguments<br>
-    board - the board to score for a given piece
+    &nbsp;Arguments<br>
+    &nbsp;board - the board to score for a given piece
