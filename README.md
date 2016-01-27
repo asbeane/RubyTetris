@@ -61,5 +61,5 @@ add_piece() - Assumes placability has already been checked.<br>
     &nbsp;Arguments<br>
     &nbsp;board - the board to score for a given piece<br>
     
-    Additions: <br>
-    &nbsp;Add more piece types with the same structure as the existing pieces.
+    Additions that could be made:
+      Add more piece types with the same structure as the existing pieces.
