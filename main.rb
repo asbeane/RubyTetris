@@ -45,7 +45,7 @@ def main()
 		while i < density
 			temp = Random.new.rand(pieces.length)
 			#temp = 3
-				if (orientation = pieces[temp].can_place(j = Random.new.rand(x),k = Random.new.rand(y), testBoard.instance_variable_get(:@board), Random.new.rand(8))) != -1
+				if (orientation = pieces[temp].can_place(j = Random.new.rand(1...x),k = Random.new.rand(1...y), testBoard.instance_variable_get(:@board), Random.new.rand(8))) != -1
 					#orientation = 2
 					pieces[temp].add_piece(j,k,testBoard.instance_variable_get(:@board), orientation)
 					i += 1
