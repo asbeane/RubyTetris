@@ -4,11 +4,11 @@ Ruby Tetris Board Scorer
 This is a board scorer for Tetris where pieces can only touch on diagonals.
 
 How to run:
-  ruby main.rb arg1 arg2 arg3
+  ruby main.rb <arg1> <arg2> <arg3>  <br>
   
-  arg1 - number of boards to score/simulate
-  arg2 - If 1, For each board, draw the initial empty to the terminal/prompt in ascii characters.
-  arg2 - If 1 - For each board
+  arg1 - number of boards to score/simulate <br>
+  arg2 - If 1, For each board, draw the initial empty to the terminal/prompt in ascii characters.  <br>
+  arg2 - If 1 - For each board <br>
 
 Classes:
   Board - Takes X and Y coordinates which implements a X by Y board.
