@@ -5,7 +5,8 @@ This is a board scorer for Tetris where pieces can only touch on diagonals.
 
 How to run:
   ruby main.rb &nbsp; [arg1]&nbsp; [arg2] &nbsp;[arg3]<br>
-  
+  Example: ruby main.rb &nbsp; 5 &nbsp; 0 &nbsp; 1<br>
+  &nbsp;&nbsp; This would simulate and score 5 boards, not print the initial board, but would print the filled board.<br>
   arg1 - number of boards to score/simulate <br>
   arg2 - If 1, For each board, draw the initial empty board to the terminal/prompt in ascii characters.<br>
   arg2 - If 1  For each board, draw the filled board with pieces.<br>
