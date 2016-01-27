@@ -33,18 +33,20 @@ Each of the Piece classes have the same 3 public functions, plus 1 private helpe
 
 Public Methods:
 
-can_place() - Arguments
+can_place() - Arguments<br>
   start_x: Starting X coordinate to check if the Piece is placable on the board.
   start_y: Starting Y coordinate to check if the Piece is placable on the board.
   board: 2D Array, which is the array describing the board to be checked for piece placability.
   orientation - A number, is normalized internally for the number of orientations a given piece has. Used to check a given orientation   for placability.
   
   
-add_piece() - Arguments. Assumes placability has already been checked.
+add_piece() - Assumes placability has already been checked.<br>
+  Arguments<br>
   start_x - Starting x value to add add a piece to a board.  
   start_y - Starting y value to add a piece to a board.
   board -   2D Array representation of the board to add the piece too.
   orientation - The orientation to add to the board. Expects a valid orientation 0-orientations-1 for that piece
   
-  find_pieces() - Arguments. Traverses a board and reports the total score given the number of the given piece on the board.
+  find_pieces() - Traverses a board and reports the total score given the number of the given piece on the board.<br>
+    Arguments<br>
     board - the board to score for a given piece
