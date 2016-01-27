@@ -47,7 +47,7 @@ can_place() - Arguments<br>
   &nbsp;start_x: Starting X coordinate to check if the Piece is placable on the board.<br>
   &nbsp;start_y: Starting Y coordinate to check if the Piece is placable on the board.<br>
   &nbsp;board: 2D Array, which is the array describing the board to be checked for piece placability.<br>
-  &nbsp;orientation - A number, is normalized internally for the number of orientations a given piece has. Used to check a given orientation for placability.<br>
+  &nbsp;orientation - A number, is normalized internally for the number of orientations a given piece has. Used to check a given &nbsp;orientation for placability.<br>
   
   
 add_piece() - Assumes placability has already been checked.<br>
