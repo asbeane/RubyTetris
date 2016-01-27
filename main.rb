@@ -1,55 +1,70 @@
 require_relative 'Board.rb'
 require_relative 'I.rb'
+require_relative 'O.rb'
+require_relative 'J.rb'
+require_relative 'T.rb'
+require_relative 'S.rb'
 
+
+# Main Function Definition
 def main()
-	testBoard = Board.new(10, 5)
-	testBoard.draw_board()
 
-	testIPiece = I.new()
+	# Command Args
+	loop_count = ARGV[0].to_i
+	print_init = ARGV[1].to_i
+	print_final = ARGV[2].to_i
 
-	#puts testIPiece.can_place(0, 0, testBoard.instance_variable_get(:@board), 10)
+	# Take command Arg to indicate Number of Loops
+	for i in 0...ARGV[0].to_i
+		x = Random.new.rand(5...30)
+		y = Random.new.rand(5...30)
+		# Initialize Board to random value between 1-50 by 1-50
+		testBoard = Board.new(x, y)
+
+		# Use Area of Board with average density of shape to get a shape count (pseudo-randomly)
+		density = Random.new.rand(1...( (x*y)/14))
 
 
-	# test board drawing more with 1 values
-	#testBoard.add_random_values(0,0,10)
-
-	r = Random.new
-	x = 10
-	y = 5
-
-	s = -1
-	x_new = y_new = i = 0
-
-	#y_new = r.rand(0...y)
-	#x_new = r.rand(0...x)
-	# r.rand(2)
-	#testIPiece.add_piece(9, 0, testBoard.instance_variable_get(:@board), 4)
-
-	while i  < 4
-		if ((s = testIPiece.can_place(x_new = r.rand(1...x), y_new = r.rand(1...y), testBoard.instance_variable_get(:@board), r.rand(2))) != -1)
-			testIPiece.add_piece(x_new, y_new, testBoard.instance_variable_get(:@board), s)
-			i += 1 
+		# Draw Initial Board
+		if print_init == 1
+			testBoard.draw_board()
 		end
+
+		pieces = Array.new
+		pieces.push(I.new())
+		pieces.push(O.new())
+		pieces.push(J.new())
+		pieces.push(T.new())
+		pieces.push(S.new())
+
+		score = 0
+		orientation = -1
+
+		# Adding random pieces to loops
+		i = 0
+		while i < density
+			temp = Random.new.rand(pieces.length)
+			#temp = 3
+				if (orientation = pieces[temp].can_place(j = Random.new.rand(x),k = Random.new.rand(y), testBoard.instance_variable_get(:@board), Random.new.rand(8))) != -1
+					#orientation = 2
+					pieces[temp].add_piece(j,k,testBoard.instance_variable_get(:@board), orientation)
+					i += 1
+				end
+		end
+
+		for i in 0...pieces.length
+			score += pieces[i].find_pieces(testBoard.instance_variable_get(:@board))
+		end
+
+		# draw final Board		
+		if print_final == 1
+			testBoard.draw_board()
+		end
+		
+		print "Final Score is: "
+		puts score
 	end
-
-	testBoard.draw_board()
-	puts testBoard.score()
-
-
-#	for x in 0...10
-#		for y in 0...5
-#			print "x: "
-#			puts x
-#			print "y: "
-#			puts y
-#		end
-#	end
-
-	# Create each piece type - and fill the board with that type each.
-	# When all types are done -- nead to create an array of piece -- flip a coin for % pieces and add a piece
-	# consider that different pieces COULD either have a separate class .. or will have a more complicate orientation
-	# DO I and square first for simplicity .. then do J, S, and T 
-
 end
 
+##### Program Execution Area ####
 main()
