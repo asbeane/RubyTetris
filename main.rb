@@ -18,7 +18,7 @@ def main()
 	for i in 0...ARGV[0].to_i
 		x = Random.new.rand(5...30)
 		y = Random.new.rand(5...30)
-		# Initialize Board to random value between 1-50 by 1-50
+		# Initialize Board to random value between 1-30 by 1-30
 		testBoard = Board.new(x, y)
 
 		# Use Area of Board with average density of shape to get a shape count (pseudo-randomly)
