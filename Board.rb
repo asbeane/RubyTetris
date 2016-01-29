@@ -15,7 +15,7 @@ class Board
 			puts " ------"*@x_dimension
 			for k in 0...2
 				for j in 1...@x_dimension+1
-					if @board[j][i] == 1 && k == 0
+					if @board[j][i] > 0 && k == 0
 						print "|  1   "
 					else
 						print "|      "

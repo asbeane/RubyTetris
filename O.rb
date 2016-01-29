@@ -39,21 +39,21 @@ class O
 	def add_piece(start_x, start_y, board, orientation)
 		case orientation
 		when 0
-			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x][start_y+1] = board[start_x+1][start_y+1] = 1
-			board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x][start_y+2] = board[start_x+1][start_y+2] = 2
-			board[start_x+2][start_y] = board[start_x-1][start_y] = board[start_x+2][start_y+1] = board[start_x-1][start_y+1] = 2
+			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x][start_y+1] = board[start_x+1][start_y+1] = 3
+			#board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x][start_y+2] = board[start_x+1][start_y+2] = 2
+			#board[start_x+2][start_y] = board[start_x-1][start_y] = board[start_x+2][start_y+1] = board[start_x-1][start_y+1] = 2
 		when 1
-			board[start_x][start_y] = board[start_x-1][start_y] = board[start_x-1][start_y+1] = board[start_x][start_y+1] = 1
-			board[start_x][start_y-1] = board[start_x-1][start_y-1] = board[start_x][start_y+2] = board[start_x-1][start_y+2] = 2
-			board[start_x+1][start_y] = board[start_x-2][start_y] = board[start_x+1][start_y+1] = board[start_x-2][start_y+1] = 2
+			board[start_x][start_y] = board[start_x-1][start_y] = board[start_x-1][start_y+1] = board[start_x][start_y+1] = 3
+			#board[start_x][start_y-1] = board[start_x-1][start_y-1] = board[start_x][start_y+2] = board[start_x-1][start_y+2] = 2
+			#board[start_x+1][start_y] = board[start_x-2][start_y] = board[start_x+1][start_y+1] = board[start_x-2][start_y+1] = 2
 		when 2
-			board[start_x][start_y] = board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x+1][start_y] = 1
-			board[start_x][start_y+1] = board[start_x+1][start_y+1] = board[start_x][start_y-2] = board[start_x+1][start_y-2] = 2
-			board[start_x+2][start_y] = board[start_x-1][start_y] = board[start_x+2][start_y-1] = board[start_x-1][start_y-1] = 2
+			board[start_x][start_y] = board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x+1][start_y] = 3
+			#board[start_x][start_y+1] = board[start_x+1][start_y+1] = board[start_x][start_y-2] = board[start_x+1][start_y-2] = 2
+			#board[start_x+2][start_y] = board[start_x-1][start_y] = board[start_x+2][start_y-1] = board[start_x-1][start_y-1] = 2
 		when 3
-			board[start_x][start_y] = board[start_x][start_y-1] = board[start_x-1][start_y-1] = board[start_x-1][start_y] = 1
-			board[start_x][start_y+1] = board[start_x-1][start_y+1] = board[start_x][start_y-2] = board[start_x-1][start_y-2] = 2
-			board[start_x+1][start_y] = board[start_x-2][start_y] = board[start_x+1][start_y-1] = board[start_x-2][start_y-1] = 2
+			board[start_x][start_y] = board[start_x][start_y-1] = board[start_x-1][start_y-1] = board[start_x-1][start_y] = 3
+			#board[start_x][start_y+1] = board[start_x-1][start_y+1] = board[start_x][start_y-2] = board[start_x-1][start_y-2] = 2
+			#board[start_x+1][start_y] = board[start_x-2][start_y] = board[start_x+1][start_y-1] = board[start_x-2][start_y-1] = 2
 		end
 	end
 
@@ -82,8 +82,8 @@ class O
 		y = (board[0].length) - 2
 
 		if x >= start_x+2 and start_y+2 <= y
-			if board[start_x][start_y] == 1 && board[start_x+1][start_y] == 1 and \
-			board[start_x][start_y+1] == 1 && board[start_x+1][start_y+1] == 1
+			if board[start_x][start_y] == 3 && board[start_x+1][start_y] == 3 and \
+			board[start_x][start_y+1] == 3 && board[start_x+1][start_y+1] == 3
 				return 1
 			end 
 		end

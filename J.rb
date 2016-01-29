@@ -74,37 +74,37 @@ class J
 	def add_piece(start_x, start_y, board, orientation)
 		case orientation
 		when 0
-			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x+2][start_y] = board[start_x][start_y+1] = 1
-			board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x+2][start_y-1] = board[start_x+3][start_y] = 2
-			board[start_x-1][start_y] = board[start_x-1][start_y+1] = board[start_x][start_y+2] = board[start_x+1][start_y+1] = board[start_x+2][start_y+1] = 2
+			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x+2][start_y] = board[start_x][start_y+1] = 2
+			#board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x+2][start_y-1] = board[start_x+3][start_y] = 2
+			#board[start_x-1][start_y] = board[start_x-1][start_y+1] = board[start_x][start_y+2] = board[start_x+1][start_y+1] = board[start_x+2][start_y+1] = 2
 		when 1
-			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x+1][start_y+1] =board[start_x+1][start_y+2] = 1
-			board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x-1][start_y] =board[start_x+2][start_y] = 2
-			board[start_x][start_y+1] = board[start_x][start_y+2] = board[start_x+2][start_y+1] =board[start_x+2][start_y+2]= board[start_x+1][start_y+3] = 2
+			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x+1][start_y+1] =board[start_x+1][start_y+2] = 2
+			#board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x-1][start_y] =board[start_x+2][start_y] = 2
+			#board[start_x][start_y+1] = board[start_x][start_y+2] = board[start_x+2][start_y+1] =board[start_x+2][start_y+2]= board[start_x+1][start_y+3] = 2
 		when 2
-			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x+2][start_y] = board[start_x+2][start_y-1] = 1
-			board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x-1][start_y] = board[start_x+3][start_y-1] = 2
-			board[start_x+3][start_y] = board[start_x][start_y+1] = board[start_x+1][start_y+1] = board[start_x+2][start_y+1] = board[start_x+2][start_y-2] = 2
+			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x+2][start_y] = board[start_x+2][start_y-1] = 2
+			#board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x-1][start_y] = board[start_x+3][start_y-1] = 2
+			#board[start_x+3][start_y] = board[start_x][start_y+1] = board[start_x+1][start_y+1] = board[start_x+2][start_y+1] = board[start_x+2][start_y-2] = 2
 		when 3
-			board[start_x][start_y] = board[start_x][start_y+1] = board[start_x][start_y+2] = board[start_x+1][start_y+2] = 1
-			board[start_x][start_y-1] = board[start_x-1][start_y] = board[start_x-1][start_y+1] = board[start_x-1][start_y+2] = 2
-			board[start_x][start_y+3] = board[start_x+1][start_y+3] = board[start_x+2][start_y+2] = board[start_x+1][start_y+1] = board[start_x+1][start_y] = 2
+			board[start_x][start_y] = board[start_x][start_y+1] = board[start_x][start_y+2] = board[start_x+1][start_y+2] = 2
+			#board[start_x][start_y-1] = board[start_x-1][start_y] = board[start_x-1][start_y+1] = board[start_x-1][start_y+2] = 2
+			#board[start_x][start_y+3] = board[start_x+1][start_y+3] = board[start_x+2][start_y+2] = board[start_x+1][start_y+1] = board[start_x+1][start_y] = 2
 		when 4
-			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x+2][start_y] = board[start_x+2][start_y+1] = 1
-			board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x+2][start_y-1] = board[start_x+3][start_y] = 2
-			board[start_x-1][start_y] = board[start_x][start_y+1] = board[start_x+1][start_y+1] = board[start_x+2][start_y+2] = board[start_x+3][start_y+1] = 2
+			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x+2][start_y] = board[start_x+2][start_y+1] = 2
+			#board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x+2][start_y-1] = board[start_x+3][start_y] = 2
+			#board[start_x-1][start_y] = board[start_x][start_y+1] = board[start_x+1][start_y+1] = board[start_x+2][start_y+2] = board[start_x+3][start_y+1] = 2
 		when 5
-			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x][start_y+1] = board[start_x][start_y+2] = 1
-			board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x-1][start_y] =board[start_x+2][start_y] = 2
-			board[start_x+1][start_y+1] = board[start_x+1][start_y+2] = board[start_x][start_y+3] =board[start_x-1][start_y+2] = board[start_x-1][start_y+1] = 2
+			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x][start_y+1] = board[start_x][start_y+2] = 2
+			#board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x-1][start_y] =board[start_x+2][start_y] = 2
+			#board[start_x+1][start_y+1] = board[start_x+1][start_y+2] = board[start_x][start_y+3] =board[start_x-1][start_y+2] = board[start_x-1][start_y+1] = 2
 		when 6
-			board[start_x][start_y] = board[start_x][start_y+1] = board[start_x+1][start_y+1] = board[start_x+2][start_y+1] = 1
-			board[start_x][start_y-1] = board[start_x+1][start_y] = board[start_x-1][start_y] = board[start_x+1][start_y+2] = 2
-			board[start_x+2][start_y+2] = board[start_x-1][start_y+1] = board[start_x][start_y+2] = board[start_x+1][start_y+2] = board[start_x+3][start_y+1] = 2
+			board[start_x][start_y] = board[start_x][start_y+1] = board[start_x+1][start_y+1] = board[start_x+2][start_y+1] = 2
+			#board[start_x][start_y-1] = board[start_x+1][start_y] = board[start_x-1][start_y] = board[start_x+1][start_y+2] = 2
+			#board[start_x+2][start_y+2] = board[start_x-1][start_y+1] = board[start_x][start_y+2] = board[start_x+1][start_y+2] = board[start_x+3][start_y+1] = 2
 		when 7
-			board[start_x][start_y] = board[start_x][start_y+1] = board[start_x][start_y+2] = board[start_x-1][start_y+2] = 1
-			board[start_x][start_y-1] = board[start_x+1][start_y] = board[start_x+1][start_y+1] = board[start_x+1][start_y+2] = 2
-			board[start_x][start_y+3] = board[start_x-1][start_y+3] = board[start_x-1][start_y+1] = board[start_x-1][start_y] = board[start_x-2][start_y+2] = 2			
+			board[start_x][start_y] = board[start_x][start_y+1] = board[start_x][start_y+2] = board[start_x-1][start_y+2] = 2
+			#board[start_x][start_y-1] = board[start_x+1][start_y] = board[start_x+1][start_y+1] = board[start_x+1][start_y+2] = 2
+			#board[start_x][start_y+3] = board[start_x-1][start_y+3] = board[start_x-1][start_y+1] = board[start_x-1][start_y] = board[start_x-2][start_y+2] = 2			
 		end
 	end
 			
@@ -133,50 +133,50 @@ class J
 		y = (board[0].length) - 2
 
 		if x >= start_x+2 && start_y+1 <= y
-			if board[start_x][start_y] == 1 && board[start_x+1][start_y] == 1 && \
-			board[start_x+2][start_y] == 1 && board[start_x][start_y+1] == 1
+			if board[start_x][start_y] == 2 && board[start_x+1][start_y] == 2 && \
+			board[start_x+2][start_y] == 2 && board[start_x][start_y+1] == 2
 				return 1
 			end
 		end
 		if x >= start_x+1 && y >= start_y+3
-			if board[start_x][start_y] == 1 && board[start_x+1][start_y] == 1 && \
-			board[start_x+1][start_y+1] == 1 && board[start_x+1][start_y+2] == 1
+			if board[start_x][start_y] == 2 && board[start_x+1][start_y] == 2 && \
+			board[start_x+1][start_y+1] == 2 && board[start_x+1][start_y+2] == 2
 				return 1
 			end
 		end
 		if x >= start_x+2 &&  1 <= start_y-1
-			if board[start_x][start_y] == 1 && board[start_x+1][start_y] == 1 && \
-			board[start_x+2][start_y] == 1 && board[start_x+2][start_y-1] == 1
+			if board[start_x][start_y] == 2 && board[start_x+1][start_y] == 2 && \
+			board[start_x+2][start_y] == 2 && board[start_x+2][start_y-1] == 2
 				return 1
 			end
 		end
 		if x >= start_x+1 && y>= start_y+2
-			if board[start_x][start_y] == 1 && board[start_x][start_y+1] == 1 && \
-			board[start_x][start_y+2] == 1 && board[start_x+1][start_y+2] == 1
+			if board[start_x][start_y] == 2 && board[start_x][start_y+1] == 2 && \
+			board[start_x][start_y+2] == 2 && board[start_x+1][start_y+2] == 2
 				return 1
 			end
 		end
 		if x >= start_x+2 && start_y+1 <= y
-			if board[start_x][start_y] == 1 && board[start_x+1][start_y] == 1 && \
-			board[start_x+2][start_y] == 1 && board[start_x+2][start_y+1] == 1
+			if board[start_x][start_y] == 2 && board[start_x+1][start_y] == 2 && \
+			board[start_x+2][start_y] == 2 && board[start_x+2][start_y+1] == 2
 				return 1
 			end
 		end
 		if  x >= start_x+1 && y >= start_y+3
-			if board[start_x][start_y] == 1 && board[start_x+1][start_y] == 1 && \
-			board[start_x][start_y+1] == 1 && board[start_x][start_y+2] == 1
+			if board[start_x][start_y] == 2 && board[start_x+1][start_y] == 2 && \
+			board[start_x][start_y+1] == 2 && board[start_x][start_y+2] == 2
 				return 1
 			end
 		end
 		if x >= start_x+2 &&  y >= start_y+1
-			if board[start_x][start_y] == 1 && board[start_x][start_y+1] == 1 && \
-			board[start_x+1][start_y+1] == 1 && board[start_x+2][start_y+1] == 1
+			if board[start_x][start_y] == 2 && board[start_x][start_y+1] == 2 && \
+			board[start_x+1][start_y+1] == 2 && board[start_x+2][start_y+1] == 2
 				return 1
 			end
 		end
 		if 1 <= start_x-1 && y>= start_y+2
-			if board[start_x][start_y] == 1 && board[start_x][start_y+1] == 1 && \
-			board[start_x][start_y+2] == 1 && board[start_x-1][start_y+2] == 1
+			if board[start_x][start_y] == 2 && board[start_x][start_y+1] == 2 && \
+			board[start_x][start_y+2] == 2 && board[start_x-1][start_y+2] == 2
 				return 1
 			end
 		end
