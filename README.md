@@ -15,7 +15,7 @@ How to run: (Expects all Command Line Arguments to be present).
   *Uses No External libraries. Only included files are the ones created as part of the program.<br>
 
 Result:
-  For the number of simulations, runs that many boards of pseudo random dimensions between 5-30 length and width, and scores it.<br>
+  For the number of simulations, runs that many boards of pseudo random dimensions between 6-30 length and width, and scores it.<br>
   The program will Always output final score of board.<br>
   Small Note for board drawing: Tested on windows and Mac OS - for larger dimensions of width, there was some distortion in the ASCII
   representation of the board, visually. The scoring still appears to work fine - but the visual drawing can become distored when the
