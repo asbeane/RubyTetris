@@ -16,7 +16,7 @@ class Board
 			for k in 0...2
 				for j in 1...@x_dimension+1
 					if @board[j][i] > 0 && k == 0
-						print "|  1   "
+						print "|  " + @board[j][i].to_s + "   " 
 					else
 						print "|      "
 					end
