@@ -26,8 +26,8 @@ def main()
 
 	randomVariable = Random.new
 	for i in 0...ARGV[0].to_i
-		x = randomVariable.rand(5...30)
-		y = randomVariable.rand(5...30)
+		x = randomVariable.rand(6...30)
+		y = randomVariable.rand(6...30)
 		# Initialize Board to random value between 1-30 by 1-30
 		testBoard = Board.new(x, y)
 
