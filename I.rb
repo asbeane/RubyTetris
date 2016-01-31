@@ -8,46 +8,46 @@ class I
 		y = (board[0].length) - 2 
 
    		if current_orientation == 0 #and start_y <= y
-			if t >= start_x+3 and start_x >= 1
-				if board[start_x][start_y] == 0 and board[start_x+1][start_y] == 0 and \
-				board[start_x+2][start_y] == 0 and board[start_x+3][start_y] == 0
+			if t >= start_x+3 && start_x >= 1
+				if board[start_x][start_y] == 0 && board[start_x+1][start_y] == 0 && \
+				board[start_x+2][start_y] == 0 && board[start_x+3][start_y] == 0
 					return 0
 				end
-			elsif t >= start_x+2 and start_x-1 >= 1
-				if board[start_x][start_y] == 0 and board[start_x-1][start_y] == 0 and \
-				board[start_x+1][start_y] == 0 and board[start_x+2][start_y] == 0
+			elsif t >= start_x+2 && start_x-1 >= 1
+				if board[start_x][start_y] == 0 && board[start_x-1][start_y] == 0 && \
+				board[start_x+1][start_y] == 0 && board[start_x+2][start_y] == 0
 					return 1
 				end
-			elsif t >= start_x+1 and start_x-2 >= 1
-				if board[start_x][start_y] == 0 and board[start_x-1][start_y] == 0 and \
-				board[start_x-2][start_y] == 0 and board[start_x+1][start_y] == 0
+			elsif t >= start_x+1 && start_x-2 >= 1
+				if board[start_x][start_y] == 0 && board[start_x-1][start_y] == 0 && \
+				board[start_x-2][start_y] == 0 && board[start_x+1][start_y] == 0
 					return 2
 				end
-			elsif t >= start_x and start_x-3 >= 1
-				if board[start_x][start_y] == 0 and board[start_x-1][start_y] == 0 and \
-				board[start_x-2][start_y] == 0 and board[start_x-3][start_y] == 0
+			elsif t >= start_x && start_x-3 >= 1
+				if board[start_x][start_y] == 0 && board[start_x-1][start_y] == 0 && \
+				board[start_x-2][start_y] == 0 && board[start_x-3][start_y] == 0
 					return 3
 				end
 			end
-		elsif current_orientation == 1 #and start_x <= t
-			if y >= start_y+3 and start_y >= 1
-				if board[start_x][start_y] == 0 and board[start_x][start_y+1] == 0 and \
-				board[start_x][start_y+2] == 0 and board[start_x][start_y+3] == 0
+		elsif current_orientation == 1 #&& start_x <= t
+			if y >= start_y+3 && start_y >= 1
+				if board[start_x][start_y] == 0 && board[start_x][start_y+1] == 0 && \
+				board[start_x][start_y+2] == 0 && board[start_x][start_y+3] == 0
 					return 4
 				end
-			elsif y >= start_y+2 and start_y-1 >= 1
-				if board[start_x][start_y] == 0 and board[start_x][start_y-1] == 0 and \
-				board[start_x][start_y+1] == 0 and board[start_x][start_y+2] == 0
+			elsif y >= start_y+2 && start_y-1 >= 1
+				if board[start_x][start_y] == 0 && board[start_x][start_y-1] == 0 && \
+				board[start_x][start_y+1] == 0 && board[start_x][start_y+2] == 0
 					return 5
 				end
-			elsif y >= start_y+1 and start_y-2 >= 1
-				if board[start_x][start_y] == 0 and board[start_x][start_y-1] == 0 and \
-				board[start_x][start_y-2] == 0 and board[start_x][start_y+1] == 0
+			elsif y >= start_y+1 && start_y-2 >= 1
+				if board[start_x][start_y] == 0 && board[start_x][start_y-1] == 0 && \
+				board[start_x][start_y-2] == 0 && board[start_x][start_y+1] == 0
 					return 6
 				end	
-			elsif y >= start_y and start_y-3 >= 1
-				if board[start_x][start_y] == 0 and board[start_x][start_y-1] == 0 and \
-				board[start_x][start_y-2] == 0 and board[start_x][start_y-3] == 0
+			elsif y >= start_y && start_y-3 >= 1
+				if board[start_x][start_y] == 0 && board[start_x][start_y-1] == 0 && \
+				board[start_x][start_y-2] == 0 && board[start_x][start_y-3] == 0
 					return 7
 				end
 			end
@@ -110,42 +110,42 @@ class I
 		case orientation
 		when 0
 			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x+2][start_y] = board[start_x+3][start_y] = 1
-			board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x+2][start_y-1] = board[start_x+3][start_y-1] = 2
+			board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x+2][start_y-1] = board[start_x+3][start_y-1] = \
 			board[start_x][start_y+1] = board[start_x+1][start_y+1] = board[start_x+2][start_y+1] = board[start_x+3][start_y+1] = 2
 			board[start_x-1][start_y] = board[start_x+4][start_y] = 2
 		when 1
 			board[start_x][start_y] = board[start_x-1][start_y] = board[start_x+1][start_y] = board[start_x+2][start_y] = 1
-			board[start_x][start_y-1] = board[start_x-1][start_y-1] = board[start_x+1][start_y-1] = board[start_x+2][start_y-1] = 2
+			board[start_x][start_y-1] = board[start_x-1][start_y-1] = board[start_x+1][start_y-1] = board[start_x+2][start_y-1] = \
 			board[start_x][start_y+1] = board[start_x-1][start_y+1] = board[start_x+1][start_y+1] = board[start_x+2][start_y+1] = 2
 			board[start_x-2][start_y] = board[start_x+3][start_y] = 2
 		when 2
 			board[start_x][start_y] = board[start_x-1][start_y] = board[start_x-2][start_y] = board[start_x+1][start_y] = 1
-			board[start_x][start_y-1] = board[start_x-1][start_y-1] = board[start_x-2][start_y-1] = board[start_x+1][start_y-1] = 2
+			board[start_x][start_y-1] = board[start_x-1][start_y-1] = board[start_x-2][start_y-1] = board[start_x+1][start_y-1] = \
 			board[start_x][start_y+1] = board[start_x-1][start_y+1] = board[start_x-2][start_y+1] = board[start_x+1][start_y+1] = 2
 			board[start_x-3][start_y] = board[start_x+2][start_y] = 2
 		when 3
 			board[start_x][start_y] = board[start_x-1][start_y] = board[start_x-2][start_y] = board[start_x-3][start_y] = 1
-			board[start_x][start_y-1] = board[start_x-1][start_y-1] = board[start_x-2][start_y-1] = board[start_x-3][start_y-1] = 2
+			board[start_x][start_y-1] = board[start_x-1][start_y-1] = board[start_x-2][start_y-1] = board[start_x-3][start_y-1] = \
 			board[start_x][start_y+1] = board[start_x-1][start_y+1] = board[start_x-2][start_y+1] = board[start_x-3][start_y+1] = 2
 			board[start_x-4][start_y] = board[start_x+1][start_y] = 2
 		when 4
 			board[start_x][start_y] = board[start_x][start_y+1] = board[start_x][start_y+2] = board[start_x][start_y+3] = 1
-			board[start_x+1][start_y] = board[start_x+1][start_y+1] = board[start_x+1][start_y+2] = board[start_x+1][start_y+3] = 2
+			board[start_x+1][start_y] = board[start_x+1][start_y+1] = board[start_x+1][start_y+2] = board[start_x+1][start_y+3] = \
 			board[start_x-1][start_y] = board[start_x-1][start_y+1] = board[start_x-1][start_y+2] = board[start_x-1][start_y+3] = 2
 			board[start_x][start_y-1] = board[start_x][start_y+4] = 2
 		when 5
 			board[start_x][start_y] = board[start_x][start_y-1] = board[start_x][start_y+1] = board[start_x][start_y+2] = 1
-			board[start_x-1][start_y] = board[start_x-1][start_y-1] = board[start_x-1][start_y+1] = board[start_x-1][start_y+2] = 2
+			board[start_x-1][start_y] = board[start_x-1][start_y-1] = board[start_x-1][start_y+1] = board[start_x-1][start_y+2] = \
 			board[start_x+1][start_y] = board[start_x+1][start_y-1] = board[start_x+1][start_y+1] = board[start_x+1][start_y+2] = 2
 			board[start_x][start_y-2] = board[start_x][start_y+3] = 2
 		when 6
 			board[start_x][start_y] = board[start_x][start_y-1] = board[start_x][start_y-2] = board[start_x][start_y+1] = 1
-			board[start_x-1][start_y] = board[start_x-1][start_y-1] = board[start_x-1][start_y-2] = board[start_x-1][start_y+1] = 2
+			board[start_x-1][start_y] = board[start_x-1][start_y-1] = board[start_x-1][start_y-2] = board[start_x-1][start_y+1] = \
 			board[start_x+1][start_y] = board[start_x+1][start_y-1] = board[start_x+1][start_y-2] = board[start_x+1][start_y+1] = 2
 			board[start_x][start_y-3] = board[start_x][start_y+2] = 2 
 		when 7
 			board[start_x][start_y] = board[start_x][start_y-1] = board[start_x][start_y-2] = board[start_x][start_y-3] = 1
-			board[start_x-1][start_y] = board[start_x-1][start_y-1] = board[start_x-1][start_y-2] = board[start_x-1][start_y-3] = 2
+			board[start_x-1][start_y] = board[start_x-1][start_y-1] = board[start_x-1][start_y-2] = board[start_x-1][start_y-3] = \
 			board[start_x+1][start_y] = board[start_x+1][start_y-1] = board[start_x+1][start_y-2] = board[start_x+1][start_y-3] = 2
 			board[start_x][start_y+1] = board[start_x][start_y-4] = 2
 		end

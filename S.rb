@@ -48,19 +48,19 @@ class S
 		case orientation
 		when 0
 			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x+1][start_y-1] = board[start_x+2][start_y-1] = 1
-			board[start_x][start_y-1] = board[start_x+1][start_y-2] = board[start_x+2][start_y-2] = board[start_x+3][start_y-1] = 2
+			board[start_x][start_y-1] = board[start_x+1][start_y-2] = board[start_x+2][start_y-2] = board[start_x+3][start_y-1] = \
 			board[start_x+2][start_y] = board[start_x+1][start_y+1] = board[start_x][start_y+1] = board[start_x-1][start_y] = 2	
 		when 1
 			board[start_x][start_y] = board[start_x][start_y+1] = board[start_x+1][start_y+1] = board[start_x+1][start_y+2] = 1
-			board[start_x][start_y-1] = board[start_x+1][start_y] = board[start_x+2][start_y+1] = board[start_x+2][start_y+2] = 2
+			board[start_x][start_y-1] = board[start_x+1][start_y] = board[start_x+2][start_y+1] = board[start_x+2][start_y+2] = \
 			board[start_x+1][start_y+3] = board[start_x][start_y+2] = board[start_x-1][start_y+1] = board[start_x-1][start_y] = 2
 		when 2
 			board[start_x][start_y] = board[start_x+1][start_y] = board[start_x+1][start_y+1] = board[start_x+2][start_y+1] = 1
-			board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x+2][start_y] = board[start_x+3][start_y+1] = 2
+			board[start_x][start_y-1] = board[start_x+1][start_y-1] = board[start_x+2][start_y] = board[start_x+3][start_y+1] = \
 			board[start_x+2][start_y+2] = board[start_x+1][start_y+2] = board[start_x][start_y+1] = board[start_x-1][start_y] = 2
 		when 3
 			board[start_x][start_y] = board[start_x][start_y+1] = board[start_x-1][start_y+1] = board[start_x-1][start_y+2] = 1
-			board[start_x][start_y-1] = board[start_x+1][start_y] = board[start_x+1][start_y+1] = board[start_x][start_y+2] = 2
+			board[start_x][start_y-1] = board[start_x+1][start_y] = board[start_x+1][start_y+1] = board[start_x][start_y+2] = \
 			board[start_x-1][start_y+3] = board[start_x-2][start_y+2] = board[start_x-2][start_y+1] = board[start_x-1][start_y] = 2
 		end
 	end
