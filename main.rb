@@ -5,7 +5,6 @@ require_relative 'J.rb'
 require_relative 'T.rb'
 require_relative 'S.rb'
 
-
 # Main Function Definition
 def main()
 
@@ -16,13 +15,12 @@ def main()
 
 	# Take command Arg to indicate Number of Loops
 
-
 	pieces = Array.new
-	pieces.push(I.new())
-	pieces.push(O.new())
-	pieces.push(J.new())
-	pieces.push(T.new())
-	pieces.push(S.new())
+	pieces.push(I.new)
+	pieces.push(O.new)
+	pieces.push(J.new)
+	pieces.push(T.new)
+	pieces.push(S.new)
 
 	randomVariable = Random.new
 	for i in 0...ARGV[0].to_i
@@ -39,7 +37,7 @@ def main()
 			testBoard.draw_board()
 		end
 
-
+		# Score to 0, for each board simulation. -1 is an invalid orientation.
 		score = 0
 		orientation = -1
 
@@ -47,9 +45,7 @@ def main()
 		i = 0
 		while i < density
 			temp = randomVariable.rand(pieces.length)
-			#temp = 3
 				if (orientation = pieces[temp].can_place(j = randomVariable.rand(1...x),k = randomVariable.rand(1...y), testBoard.instance_variable_get(:@board), Random.new.rand(8))) != -1
-					#orientation = 2
 					pieces[temp].add_piece(j,k,testBoard.instance_variable_get(:@board), orientation)
 					i += 1
 				end
