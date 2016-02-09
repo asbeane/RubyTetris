@@ -13,14 +13,8 @@ def main()
 	print_init = ARGV[1].to_i
 	print_final = ARGV[2].to_i
 
-	# Take command Arg to indicate Number of Loops
-
-	pieces = Array.new
-	pieces.push(I.new)
-	pieces.push(O.new)
-	pieces.push(J.new)
-	pieces.push(T.new)
-	pieces.push(S.new)
+	# Initialize Array of pieces, with possible piece types.
+	pieces = Array.new.push(I.new, O.new, J.new, T.new, S.new)
 
 	randomVariable = Random.new
 	for i in 0...ARGV[0].to_i
