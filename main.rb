@@ -24,7 +24,7 @@ def main()
 		# Initialize Board to random value between 6-30 by 6-30
 		testBoard = Board.new(x, y)
 
-		# Use Area of Board with average density of shape to get a shape count (pseudo-randomly)
+		# Use Area of Board with average density of shape (14 cells) to get a shape count (pseudo-randomly).
 		density = randomVariable.rand(1...( (x*y)/14))
 
 		# Draw Initial Board
@@ -37,7 +37,6 @@ def main()
 		orientation = -1
 
 		# Adding random pieces to loops
-		i = 0
 		density.times do |i|
 			if (orientation = pieces[temp = randomVariable.rand(pieces.length)].can_place(j = randomVariable.rand(1...x),k = randomVariable.rand(1...y), testBoard.instance_variable_get(:@board), Random.new.rand(8))) != -1
 				pieces[temp].add_piece(j,k,testBoard.instance_variable_get(:@board), orientation)
@@ -53,8 +52,7 @@ def main()
 			testBoard.draw_board()
 		end
 		
-		print "Final Score is: "
-		puts score
+		puts "Final Score is: " + score.to_s
 	end
 end
 
