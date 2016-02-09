@@ -17,7 +17,8 @@ def main()
 	pieces = Array.new.push(I.new, O.new, J.new, T.new, S.new)
 
 	randomVariable = Random.new
-	for i in 0...ARGV[0].to_i
+
+	ARGV[0].to_i.times do |i|
 		x = randomVariable.rand(6...30)
 		y = randomVariable.rand(6...30)
 		# Initialize Board to random value between 6-30 by 6-30
@@ -37,15 +38,13 @@ def main()
 
 		# Adding random pieces to loops
 		i = 0
-		while i < density
-			temp = randomVariable.rand(pieces.length)
-				if (orientation = pieces[temp].can_place(j = randomVariable.rand(1...x),k = randomVariable.rand(1...y), testBoard.instance_variable_get(:@board), Random.new.rand(8))) != -1
-					pieces[temp].add_piece(j,k,testBoard.instance_variable_get(:@board), orientation)
-					i += 1
-				end
+		density.times do |i|
+			if (orientation = pieces[temp = randomVariable.rand(pieces.length)].can_place(j = randomVariable.rand(1...x),k = randomVariable.rand(1...y), testBoard.instance_variable_get(:@board), Random.new.rand(8))) != -1
+				pieces[temp].add_piece(j,k,testBoard.instance_variable_get(:@board), orientation)
+			end
 		end
 
-		for i in 0...pieces.length
+		pieces.length.times do |i|
 			score += pieces[i].find_pieces(testBoard.instance_variable_get(:@board))
 		end
 
